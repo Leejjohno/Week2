@@ -23,3 +23,20 @@
 
 // console.log( 'no concat: ', shoppingList[1][2]);
 // console.log( 'sub-array: ', shoppingList[1] )
+
+dataChecker = (string, rank) => [
+    string = "codenation",
+    rank = 1,
+    ]
+
+    if(string == "codenation" && rank == 1)
+        console.log("yeah that seems right")
+
+    else if(string == "codenation" && rank != 1) 
+        console.log("your number is out")
+
+    else if(string != "codenation" && rank == 1) 
+        console.log("your text is out")
+        else {
+            console.log("both are wrong")
+        }
