@@ -17,6 +17,9 @@ h1 {
     border: 10px grey;
     flex-flow: column wrap;
 }
+
+.container
+    
 /* this is my navbar with flexbox components in it*/
 #navbar {
     display:flex;
