@@ -2,11 +2,43 @@ h1 {
     color: blueviolet;
 }
 
-.container {
-    background-color: black;
-    border: 10px;
+.floors {
+    display: flex;
+    min-height: 30vh;
+    background-color: white;
+    border: 10px grey;
+    flex-flow: row wrap;
 }
 
-#jibberish {
-    background-color: darkslategrey
+.walls {
+    display: flex;
+    min-height: 30vh;
+    background-color: white;
+    border: 10px grey;
+    flex-flow: column wrap;
+}
+/* this is my navbar with flexbox components in it*/
+#navbar {
+    display:flex;
+    margin: 10%;
+    justify-content:center;
+    border-color: rgba(255, 166, 0, 0.4);
+    border-style: solid;
+    border-width: 5%;
+    gap: 5%;
+    row-gap: 5%;
+    column-gap: 5%;
+}
+
+/* this makes the text in the navbar have solid underlining.
+Note how we can target 'a' within 'navbar' */
+#navbar a {
+    font-size: large;
+    text-decoration-style: solid;
+    color: orange;
+}
+
+/* makes the hyperlinks in the navbar glow white when you hover over*/
+#navbar a:hover {
+    color:aliceblue;
 }
