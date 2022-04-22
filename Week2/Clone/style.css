@@ -1,0 +1,132 @@
+/* body is all of everything so don't be too specific here*/
+.body {
+  font-family: Arial, Helvetica, sans-serif;
+  border: solid 2px black;
+  text-decoration-style: double;
+}
+
+/* This is the parent navigation bar */
+.topBar {
+  font-family: Arial;
+  height: 60px;
+  border: solid 2px red;
+  display: flex;
+  flex-direction: row;
+  flex-basis:content
+  /* justify-content: flex-end; */
+   /* align-items: baseline; */
+  }
+
+.dropdown {
+  color: black;
+  background-color: white;
+  justify-self: flex-start;
+  border: solid 2px blue;
+  position: relative;
+  display: inline-block;
+}
+
+.dropbtn {
+  border: solid 2px green;
+  background-color: white;
+  color: black;
+  padding: none;
+  font-size: 16px;
+  border: none;
+}
+
+.dropdown-content {
+  border: solid 2px purple;
+  display: none;
+  position: absolute;
+  background-color: rgba(50, 50, 50, 255);
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+ 
+.dropdown-content a {
+  border: solid 2px cyan;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.divider {
+  border: solid 2px paleturquoise;
+  color:yellow
+}
+
+.toTheRIGHT {
+  border: solid 2px red;
+  justify-content: end;
+}
+
+
+#websitePillButton {
+  position: relative;
+  width: 100px;
+  height: 40px;
+  margin: 10px 0;
+  background-color: rgb(236, 179, 197);
+  padding: 10px, 20px;
+  border-radius: 30px;
+  color: black;
+  font-weight:bold;
+  text-align: center;
+  line-height: 38px;
+  text-indent: .1em;
+}
+#websitePillButton:hover {
+  background: rgb(75, 165, 75);
+}
+
+#paidCoursesPillButton {
+  position: relative;
+  width: 125px;
+  height: 40px;
+  margin: 10px 0;
+  background-color: white;
+  padding: 10px, 20px;
+  border-radius: 30px;
+  color: black;
+  font-weight:bold;
+  text-align: center;
+  line-height: 38px;
+  text-indent: .1em;
+}
+#paidCoursesPillButton:hover {
+  background: rgb(75, 165, 75);
+  color: white;
+}
+
+#logInPillButton {
+  position: relative;
+  width: 135px;
+  height: 40px;
+  margin: 10px 0;
+  background-color: rgb(84, 200, 84);
+  padding: 10px, 20px;
+  border-radius: 30px;
+  color: white;
+  font-weight:bold;
+  text-align: center;
+  line-height: 38px;
+  text-indent: .1em;
+}
+
+#logInPillButton:hover {
+  background: rgb(75, 165, 75);
+}
+
+ /* Change color of dropdown links on hover  */
+.dropdown-content a:hover {
+  color: rgba(50, 50, 50, 255);
+  background-color: aliceblue;}
+
+ /* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {display: block;}
+
+ /* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {background-color: rgba(100, 200, 100, 255)} 
