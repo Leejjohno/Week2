@@ -1,21 +1,44 @@
 /* body is all of everything so don't be too specific here*/
 .body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: sans-serif;
   border: solid 2px black;
-  text-decoration-style: double;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content:center;
+  text-align-last: center;
+}
+
+h1 {
+  font-size: 30;
+  margin: 10px;
+  font-weight: 700;
 }
 
 /* This is the parent navigation bar */
 .topBar {
-  font-family: Arial;
+  column-gap: 15px;
   height: 60px;
   border: solid 2px red;
   display: flex;
   flex-direction: row;
-  flex-basis:content
+  /* flex-basis:content; */
   /* justify-content: flex-end; */
    /* align-items: baseline; */
   }
+
+.homeButton {
+  background-color: white;
+  border-radius: 10px;
+  color: rgb(84, 200, 84);
+  font-weight: bold;
+  text-align: center;
+  line-height: 40px;
+}
+  
+.homeButton:hover {
+  color: white;
+  background-color:  rgb(84, 200, 84);
+}
 
 .dropdown {
   color: black;
@@ -32,30 +55,51 @@
   color: black;
   padding: none;
   font-size: 16px;
-  border: none;
 }
 
+/* What appears in the drop down */
 .dropdown-content {
   border: solid 2px purple;
   display: none;
-  position: absolute;
+  position: relative;
   background-color: rgba(50, 50, 50, 255);
-  min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
+  /* z-index: 1; */
 }
  
+
 .dropdown-content a {
   border: solid 2px cyan;
-  color: black;
+  color: white;
   padding: 12px 16px;
+  text-align: left;
   text-decoration: none;
   display: block;
 }
 
 .divider {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
   border: solid 2px paleturquoise;
-  color:yellow
+  color:yellow;
+  font-weight: bold;
+}
+
+.dropLinks {
+  color:yellow;
+  font-weight: bold;
+  
+}
+
+.learnToCodeHeader1 {
+color: white;
+}
+
+.learnToCodeHeader2 {
+  color: #FFC0C7;
+  font-weight: 700;
+  margin-top: 30px;
 }
 
 .toTheRIGHT {
@@ -75,11 +119,12 @@
   color: black;
   font-weight:bold;
   text-align: center;
-  line-height: 38px;
+  line-height: 40px;
   text-indent: .1em;
 }
 #websitePillButton:hover {
-  background: rgb(75, 165, 75);
+  background: rgb(75, 155, 75);
+  color: white;
 }
 
 #paidCoursesPillButton {
@@ -91,13 +136,13 @@
   padding: 10px, 20px;
   border-radius: 30px;
   color: black;
-  font-weight:bold;
+  font-weight: bold;
   text-align: center;
-  line-height: 38px;
+  line-height: 40px;
   text-indent: .1em;
 }
 #paidCoursesPillButton:hover {
-  background: rgb(75, 165, 75);
+  background: rgb(75, 155, 75);
   color: white;
 }
 
@@ -110,14 +155,104 @@
   padding: 10px, 20px;
   border-radius: 30px;
   color: white;
-  font-weight:bold;
+  font-weight: bold;
   text-align: center;
-  line-height: 38px;
+  line-height: 40px;
   text-indent: .1em;
 }
 
 #logInPillButton:hover {
-  background: rgb(75, 165, 75);
+  background: rgb(75, 155, 75);
+}
+
+
+.learnToCodeContent {
+  padding: 25%;
+  background-color: black;
+  color:white;
+  justify-content: center;
+}
+
+.HTML {
+  border: 10px black;
+  padding: 25%;
+  background-color: rgb(225, 255, 219);
+  color:black;
+}
+
+#learnHTMLPillButton {
+  position: relative;
+  width: 200px;
+  height: 40px;
+  margin: 10px;
+  background-color: rgb(84, 200, 84);
+  padding: 10px, 20px;
+  border-radius: 30px;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  line-height: 40px;
+  text-indent: .1em;
+}
+
+#learnHTMLPillButton:hover {
+  color: white;
+  background: rgb(75, 155, 75);
+}
+
+#videoTutorialPillButton {
+  position: relative;
+  width: 200px;
+  height: 40px;
+  margin: 10px;
+  background-color: rgb(255, 236, 151);
+  padding: 10px, 20px;
+  border-radius: 30px;
+  color: black;
+  font-weight:bold;
+  text-align: center;
+  line-height: 40px;
+  text-indent: .1em;
+}
+
+#videoTutorialPillButton:hover {
+  background: rgb(255, 207, 104);
+}
+
+#HTMLReferencePillButton {
+  position: relative;
+  width: 200px;
+  height: 40px;
+  margin: 10px;
+  background: rgb(78, 78, 78);
+  padding: 10px, 20px;
+  border-radius: 30px;
+  color: white;
+  font-weight:bold;
+  text-align: center;
+  line-height: 40px;
+  text-indent: .1em;
+}
+
+#HTMLReferencePillButton:hover {
+  background: rgb(0, 0, 0);
+}
+
+#CSS {
+  border: 10px black;
+  padding: 25%;
+  background-color: rgb(255, 236, 151);
+  color:black;
+  
+}
+
+.searchBar {
+  font-weight: bold;
+  text-decoration-line: underline;
+}
+
+.searchBar:hover{
+color: rgb(75, 155, 75);
 }
 
  /* Change color of dropdown links on hover  */
@@ -126,7 +261,10 @@
   background-color: aliceblue;}
 
  /* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {display: block;}
+.dropdown:hover .dropdown-content {
+  display: flex;
+  flex-direction: column; 
+}
 
  /* Change the background color of the dropdown button when the dropdown content is shown */
-.dropdown:hover .dropbtn {background-color: rgba(100, 200, 100, 255)} 
+.dropdown:hover .dropbtn {background-color: rgb(100, 200, 100)} 
