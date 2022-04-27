@@ -6,12 +6,12 @@
 </head>
 <body class="body">
 <div class="topBar">
-  <div class="homeButton">
-    <div href="#">W3s</div>>
+  <div>
+    <div class="homeButton">W3s</div>>
   </div>
 <!-- Here are the dropdown buttons-->
   <div class="dropdown">
-    <button class="dropbtn">Tutorials</button>
+    <div class="dropbtn">Tutorials</div>
     <div class="dropdown-content">
       <div class="divider">
         <h2>Tutorials</h2>
@@ -101,7 +101,7 @@
   </div>
 
   <div class="dropdown">
-    <button class="dropbtn">References</button>
+    <div class="dropbtn">References</div>
     <div class="dropdown-content">
       <div class="divider">
         <h2>References</h2>
@@ -157,7 +157,7 @@
   </div>
 
   <div class="dropdown">
-    <button class="dropbtn">Exercises</button>
+    <div class="dropbtn">Exercises</div>
     <div class="dropdown-content">
       <div class="divider">
         <h2>Exercises and Quizzes</h2>
@@ -233,47 +233,43 @@
 </div>
 
 <div class="learnToCodeContent">
-  <h1 class="learnToCodeHeader1">Learn to Code</h1>
-<h2 class="learnToCodeHeader2">With the world's largest web developer site</h2>
+  <h1 id="learnToCodeHeader1">Learn to Code</h1>
+<h2 id="learnToCodeHeader2">With the world's largest web developer site</h2>
 
 <div class="searchBar">
   <div>
-    <input type="text" placeholder="Search our tutorials, e.g. HTML"></input>
+    <input id="searchText" type="text" placeholder="Search our tutorials, e.g. HTML"></input>
   </div>
   <div>
-    <button type="submit">Search</button>
+    <div type="submit">Search</div>
   </div>
   <div>
-    <link href="#">Not Sure Where To Begin?</link>
+    <link id="notSureLink" href="#">Not Sure Where To Begin?</link>
   </div>
 </div>
 </div>
 
+<div class="HTMLContent">
+  <h1 id="HTMLHeader">HTML</h1>
 
+    <h2 id="HTMLHeader2">The Language for building web pages</h2>
 
-<div class="HTML">
-  <h1>HTML</h1>
-
-  <div>
-    <h2>The Language for building web pages</h2>
-
-    <div>
+  
       <div id="learnHTMLPillButton" href="#">Learn HTML</div>
-    </div>
+  
 
-    <div>
+    
       <div id="videoTutorialPillButton" href="#">Video Tutorial</div>
-    </div>
+  
 
-    <div>
+    
       <div id="HTMLReferencePillButton" href="#">HTML Reference</div>
-    </div>
-  </div>
+    
+
  
 
-  <div>
-  <textarea name="HTML Example" id="HTMLDemo" cols="40" rows="15">
 
+  <textarea name="HTML Example" id="HTMLDemo" cols="40" rows="15">
     &lt;!DOCTYPE html&gt;
     &lt;html&gt;
     &lt;title&gt;HTML Tutorial &lt;title&gt;
@@ -287,12 +283,11 @@
 
   </textarea>
   <button>Try it Yourself</button>
-  </div>
 
 </div>
 
-<div class="CSS">
-  <h1>CSS</h1>
+<div class="CSSContent">
+  <h1 id="CSSHeader1">CSS</h1>
   <div>
     <p> The Language for styling web pages</p>
     <button>Learn CSS</button>

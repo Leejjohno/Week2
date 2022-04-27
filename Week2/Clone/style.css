@@ -3,36 +3,54 @@
   font-family: sans-serif;
   border: solid 2px black;
   display: flex;
-  flex-flow: column wrap;
-  justify-content:center;
+  flex-direction: column;
+  justify-content: center;
   text-align-last: center;
+}
+  
+#searchText {
+  position: relative;
+  height: 40px;
+  width: 550px;
+  margin: 15px;
+  background: white;
+  border-radius: 30px;
+  color: white;
+  text-justify:;
+  font-weight:bold;
+  text-align: left;
+  line-height: 40px;
 }
 
 h1 {
-  font-size: 30;
-  margin: 10px;
-  font-weight: 700;
+  border-radius: 100px;
+  margin: 200px;
+  margin-bottom:50px ;
+  font-weight: bolder;
 }
 
 /* This is the parent navigation bar */
 .topBar {
   column-gap: 15px;
   height: 60px;
-  border: solid 2px red;
+  /* border: solid 2px red; */
   display: flex;
-  flex-direction: row;
-  /* flex-basis:content; */
+  /* flex-direction: row; */
   /* justify-content: flex-end; */
-   /* align-items: baseline; */
+   align-items: baseline;
+   justify-items: center;
   }
 
 .homeButton {
+  height: 30px;
+  width: 30px;
+  padding: 20px;
+  margin-left: 30%;
+  margin-right: 30px; 
   background-color: white;
-  border-radius: 10px;
   color: rgb(84, 200, 84);
   font-weight: bold;
   text-align: center;
-  line-height: 40px;
 }
   
 .homeButton:hover {
@@ -43,25 +61,25 @@ h1 {
 .dropdown {
   color: black;
   background-color: white;
-  justify-self: flex-start;
-  border: solid 2px blue;
+  /* justify-self: flex-start; */
+  /* border: solid 2px blue; */
   position: relative;
-  display: inline-block;
+  /* display: inline-block; */
 }
 
 .dropbtn {
-  border: solid 2px green;
+  /* border: solid 2px green; */
   background-color: white;
   color: black;
-  padding: none;
+  padding: 20px;
   font-size: 16px;
 }
 
 /* What appears in the drop down */
 .dropdown-content {
-  border: solid 2px purple;
+  /* border: solid 2px purple; */
   display: none;
-  position: relative;
+  position: absolute;
   background-color: rgba(50, 50, 50, 255);
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   /* z-index: 1; */
@@ -69,11 +87,11 @@ h1 {
  
 
 .dropdown-content a {
-  border: solid 2px cyan;
+  font-weight: bold;
   color: white;
-  padding: 12px 16px;
+  padding: 10px;
   text-align: left;
-  text-decoration: none;
+  text-decoration:double;
   display: block;
 }
 
@@ -92,15 +110,6 @@ h1 {
   
 }
 
-.learnToCodeHeader1 {
-color: white;
-}
-
-.learnToCodeHeader2 {
-  color: #FFC0C7;
-  font-weight: 700;
-  margin-top: 30px;
-}
 
 .toTheRIGHT {
   border: solid 2px red;
@@ -122,6 +131,7 @@ color: white;
   line-height: 40px;
   text-indent: .1em;
 }
+
 #websitePillButton:hover {
   background: rgb(75, 155, 75);
   color: white;
@@ -141,6 +151,7 @@ color: white;
   line-height: 40px;
   text-indent: .1em;
 }
+
 #paidCoursesPillButton:hover {
   background: rgb(75, 155, 75);
   color: white;
@@ -167,15 +178,65 @@ color: white;
 
 
 .learnToCodeContent {
-  padding: 25%;
+  display: flex;
+  flex-direction: column;
+  min-width: 100%;
+  max-width: fit-content;
+  min-height: 800px;
   background-color: black;
   color:white;
-  justify-content: center;
 }
 
-.HTML {
-  border: 10px black;
-  padding: 25%;
+#learnToCodeHeader1 {
+  color: white;
+  font-weight: bold;
+  font-size: 50px;
+  }
+  
+#learnToCodeHeader2 {
+  color: #FFC0C7;
+  font-weight: bold;
+  margin: 30px;
+}
+#notSureLink {
+  flex-grow:;
+  align-items: stretch;
+
+}
+
+#HTMLHeader {
+  font-size: 70px;
+  font-weight: bold;
+}
+
+#HTMLHeader2 {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.HTMLContent {
+  display: flex;
+  flex-direction: column;
+  min-width: 100%;
+  max-width: fit-content;
+  align-items: center;
+  background-color: rgb(225, 255, 219);
+  color:black;
+}
+
+textarea {
+  height: 300px;
+  margin-bottom: 30px;
+  border: 30px;
+  margin: 30px;
+}
+
+.CSSContent {
+  display: flex;
+  flex-direction: column;
+  min-width: 100%;
+  max-width: fit-content;
+  align-items: center;
   background-color: rgb(225, 255, 219);
   color:black;
 }
@@ -184,15 +245,13 @@ color: white;
   position: relative;
   width: 200px;
   height: 40px;
-  margin: 10px;
   background-color: rgb(84, 200, 84);
-  padding: 10px, 20px;
   border-radius: 30px;
   color: white;
   font-weight: bold;
   text-align: center;
   line-height: 40px;
-  text-indent: .1em;
+  margin: 10px;
 }
 
 #learnHTMLPillButton:hover {
@@ -204,15 +263,13 @@ color: white;
   position: relative;
   width: 200px;
   height: 40px;
-  margin: 10px;
   background-color: rgb(255, 236, 151);
-  padding: 10px, 20px;
   border-radius: 30px;
   color: black;
   font-weight:bold;
   text-align: center;
   line-height: 40px;
-  text-indent: .1em;
+  margin: 10px
 }
 
 #videoTutorialPillButton:hover {
@@ -223,27 +280,30 @@ color: white;
   position: relative;
   width: 200px;
   height: 40px;
-  margin: 10px;
   background: rgb(78, 78, 78);
-  padding: 10px, 20px;
   border-radius: 30px;
   color: white;
   font-weight:bold;
   text-align: center;
   line-height: 40px;
-  text-indent: .1em;
+  margin: 10px
 }
 
 #HTMLReferencePillButton:hover {
   background: rgb(0, 0, 0);
 }
 
-#CSS {
+.CSSContent {
   border: 10px black;
   padding: 25%;
   background-color: rgb(255, 236, 151);
   color:black;
   
+}
+
+#CSSHeader1 {
+  font-size: 70px;
+  font-weight: bold;
 }
 
 .searchBar {
