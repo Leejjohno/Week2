@@ -1,35 +1,23 @@
 /* body is all of everything so don't be too specific here*/
 .body {
   font-family: sans-serif;
-  border: solid 2px black;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  text-align-last: center;
-}
-  
-#searchText {
-  position: relative;
-  height: 40px;
-  width: 550px;
-  margin: 15px;
-  background: white;
-  border-radius: 30px;
-  color: white;
-  text-justify:;
-  font-weight:bold;
-  text-align: left;
-  line-height: 40px;
 }
 
 h1 {
   border-radius: 100px;
   margin: 200px;
-  margin-bottom:50px ;
+  margin-bottom: 50px;
   font-weight: bolder;
 }
 
 /* This is the parent navigation bar */
+/* --------------------------------------
+--------------------------------------
+-------------------------------------- */
+
 .topBar {
   column-gap: 15px;
   height: 60px;
@@ -67,8 +55,8 @@ h1 {
   /* display: inline-block; */
 }
 
+/*this is just the button*/
 .dropbtn {
-  /* border: solid 2px green; */
   background-color: white;
   color: black;
   padding: 20px;
@@ -77,40 +65,52 @@ h1 {
 
 /* What appears in the drop down */
 .dropdown-content {
-  /* border: solid 2px purple; */
   display: none;
   position: absolute;
+  min-width: 500%;
+  max-width: min-content;
   background-color: rgba(50, 50, 50, 255);
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  /* z-index: 1; */
+  z-index: 1;
 }
  
-
 .dropdown-content a {
   font-weight: bold;
   color: white;
   padding: 10px;
-  text-align: left;
+  text-align: start;
   text-decoration:double;
-  display: block;
 }
 
 .divider {
-  display: flex;
-  flex-flow: column wrap;
-  align-items: center;
-  border: solid 2px paleturquoise;
+  margin: 40px;
+  text-indent: 20px;
   color:yellow;
   font-weight: bold;
 }
 
+/* list of clickable content in the dropdown menu */
 .dropLinks {
+  display: inline-flex;
+  flex-flow: column wrap;
   color:yellow;
   font-weight: bold;
-  
+  margin: 50px;
 }
 
+/* Change color of dropdown links on hover  */
+.dropdown-content a:hover {
+  color: rgba(50, 50, 50, 255);
+  background-color: aliceblue;}
 
+ /* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: flex;
+  flex-direction: column; 
+}
+
+ /* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {background-color: rgb(100, 200, 100)} 
 .toTheRIGHT {
   border: solid 2px red;
   justify-content: end;
@@ -129,7 +129,7 @@ h1 {
   font-weight:bold;
   text-align: center;
   line-height: 40px;
-  text-indent: .1em;
+  box-shadow: 1px 1px 1px palevioletred;
 }
 
 #websitePillButton:hover {
@@ -149,7 +149,6 @@ h1 {
   font-weight: bold;
   text-align: center;
   line-height: 40px;
-  text-indent: .1em;
 }
 
 #paidCoursesPillButton:hover {
@@ -169,13 +168,16 @@ h1 {
   font-weight: bold;
   text-align: center;
   line-height: 40px;
-  text-indent: .1em;
+  box-shadow: 1px 1px 1px green;
 }
 
 #logInPillButton:hover {
   background: rgb(75, 155, 75);
 }
 
+/* This is the main page with a black background
+---------------------------------------------
+--------------------------------------------- */
 
 .learnToCodeContent {
   display: flex;
@@ -183,6 +185,8 @@ h1 {
   min-width: 100%;
   max-width: fit-content;
   min-height: 800px;
+  align-items: center;
+  text-align: center;
   background-color: black;
   color:white;
 }
@@ -198,11 +202,52 @@ h1 {
   font-weight: bold;
   margin: 30px;
 }
-#notSureLink {
-  flex-grow:;
-  align-items: stretch;
 
+.searchBar {
+  display: flex;
+  font-weight: bold;
+  text-decoration-line: underline;
+  text-align: center;
+  margin-bottom: 20px;
 }
+#searchText {
+  position: relative;
+  border-top: 1px;
+  height: 40px;
+  width: 400px;
+  background: white;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+  color: white;
+  text-justify: left;
+  font-weight:bold;
+  text-align: left;
+  line-height: 40px;
+}
+#submitPillButton {
+  position: relative;
+  width: 115px;
+  height: 43px;
+  background-color: rgb(84, 200, 84);
+  padding: 10px, 20px;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+  box-shadow: 1px 1px 1px green;
+}
+#submitPillButton:hover {
+  background: rgb(75, 155, 75);
+}
+
+#notSureLink {
+  justify-content: center;
+}
+#notSureLink:hover {
+  color:  rgb(84, 200, 84)
+}
+
+/* This is the html section
+--------------------------------------
+-------------------------------------- */
 
 #HTMLHeader {
   font-size: 70px;
@@ -223,22 +268,15 @@ h1 {
   background-color: rgb(225, 255, 219);
   color:black;
 }
-
-textarea {
-  height: 300px;
-  margin-bottom: 30px;
-  border: 30px;
-  margin: 30px;
+.textareaBox {
+  position:static;
+  background-color: lightslategray;
+  box-shadow:3px 2px 1px black;
+  margin: 50px
 }
-
-.CSSContent {
-  display: flex;
-  flex-direction: column;
-  min-width: 100%;
-  max-width: fit-content;
-  align-items: center;
-  background-color: rgb(225, 255, 219);
-  color:black;
+textarea {
+  margin: 30px;
+  box-shadow: 1px 1px 1px lightslategray;
 }
 
 #learnHTMLPillButton {
@@ -252,6 +290,7 @@ textarea {
   text-align: center;
   line-height: 40px;
   margin: 10px;
+  box-shadow: 1px 1px 1px green;
 }
 
 #learnHTMLPillButton:hover {
@@ -269,7 +308,8 @@ textarea {
   font-weight:bold;
   text-align: center;
   line-height: 40px;
-  margin: 10px
+  margin: 10px;
+  box-shadow: 1px 1px 1px darkkhaki;
 }
 
 #videoTutorialPillButton:hover {
@@ -286,19 +326,26 @@ textarea {
   font-weight:bold;
   text-align: center;
   line-height: 40px;
-  margin: 10px
+  margin: 10px;
+  box-shadow: 1px 1px 1px black;
 }
 
 #HTMLReferencePillButton:hover {
   background: rgb(0, 0, 0);
 }
 
+/* This is the CSS segment of the website
+----------------------------------------
+---------------------------------------- */
+
 .CSSContent {
-  border: 10px black;
-  padding: 25%;
+  display: flex;
+  flex-direction: column;
+  min-width: 100%;
+  max-width: fit-content;
+  align-items: center;
   background-color: rgb(255, 236, 151);
   color:black;
-  
 }
 
 #CSSHeader1 {
@@ -306,25 +353,62 @@ textarea {
   font-weight: bold;
 }
 
-.searchBar {
+#learnCSSPillButton {
+  position: relative;
+  width: 200px;
+  height: 40px;
+  background-color: rgb(84, 200, 84);
+  border-radius: 30px;
+  color: white;
   font-weight: bold;
-  text-decoration-line: underline;
+  text-align: center;
+  line-height: 40px;
+  box-shadow: 1px 1px 1px green;
+}
+
+#learnCSSPillButton:hover {
+  color: white;
+  background: rgb(75, 155, 75);
+}
+#CSSReferencePillButton {
+  position: relative;
+  width: 200px;
+  height: 40px;
+  background: rgb(78, 78, 78);
+  border-radius: 30px;
+  color: white;
+  font-weight:bold;
+  text-align: center;
+  line-height: 40px;
+  margin: 15px;
+  box-shadow: 1px 1px 1px black;
+}
+
+#CSSReferencePillButton:hover {
+  background: rgb(0, 0, 0);
+}
+
+.try {
+  position: relative;
+  width: 225px;
+  height: 40px;
+  background-color: rgb(84, 200, 84);
+  border-radius: 30px;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  line-height: 40px;
+  box-shadow: 1px 1px 1px green;
+  margin-left: 30px;
+  margin-bottom: 30px;
+}
+
+.try:hover{
+  background-color: rgb(75, 155, 75);
 }
 
 .searchBar:hover{
-color: rgb(75, 155, 75);
+  color: rgb(75, 155, 75);
 }
 
- /* Change color of dropdown links on hover  */
-.dropdown-content a:hover {
-  color: rgba(50, 50, 50, 255);
-  background-color: aliceblue;}
-
- /* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {
-  display: flex;
-  flex-direction: column; 
-}
-
- /* Change the background color of the dropdown button when the dropdown content is shown */
-.dropdown:hover .dropbtn {background-color: rgb(100, 200, 100)} 
+ 
