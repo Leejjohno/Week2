@@ -1,0 +1,67 @@
+:root {
+  --primary: grey;
+  --secondary: skyblue;
+  --dark: black;
+  --light: orange;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: monospace;
+}
+
+body {
+  background-color: var(--light);
+}
+
+.App {
+  display: flex;
+  flex-direction: column-reverse;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.calculator {
+  width: 100%;
+  max-width: 350px;
+  border-radius: 30px;
+  padding: 20px;
+  background-color: var(--primary);
+  overflow: hidden;
+  box-shadow: 0px 10px 20px 10px black, 10px 15px 20px 10px;
+  
+}
+
+.display {
+  min-height: 68px;
+  font-size: 30px;
+  font-weight: bold;
+  padding: 16px;
+  margin: 20px;
+  text-align: right;
+  color: rgba(0, 0, 0, 0.446);
+  background-color: rgb(0, 57, 0);
+  box-shadow: 0px 0px 0px 10px;
+  overflow: hidden;
+}
+/* .display span {
+} */
+
+button {
+  flex: 1 1 1 33%;
+  min-width: 75px;
+  margin: 10px;
+  border: 3px;
+  font-size: 30px;
+  border-radius: 2px;
+  box-shadow: 0px 4px 20px 2px black, 2px 2px 2px 2px;
+}
+.numBox {
+  border: 2px var(--dark) solid;
+  box-shadow: 0px 0px 20px 2px var(--dark), 2px 2px 2px 2px;
+  border-radius: 5px;
+  background-color: darkgray;
+}
